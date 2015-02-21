@@ -54,5 +54,5 @@ if (isset($_SESSION['auth']) && $_SESSION['auth'] === 1) {
         </fieldset>
     </form>
 </section>
-
+</body></html>
 
