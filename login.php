@@ -26,7 +26,7 @@
 session_start();
 $page_title = 'Login';
 require_once('inc/head.php');
-require_once('inc/menu.php');
+require_once('inc/LoginMenu.php');
 require_once('inc/info_box.php');
 // Check if already logged in
 if (isset($_SESSION['auth']) && $_SESSION['auth'] === 1) {
@@ -53,25 +53,6 @@ if (isset($_SESSION['auth']) && $_SESSION['auth'] === 1) {
           <input type="submit" name="Submit" value="Log in" />
         </fieldset>
     </form>
-    <p>Note : you need cookies enabled to log in.<br />
-    Don't have an account ? <a href='register.php'>Register</a> now !<br />
-    Lost your password ? <a href='#' class='trigger'>Reset</a> it !</p>
-    <div class='toggle_container'>
-<hr>
-    <form name='resetPass' method='post' action='reset-pass.php'>
-    <input placeholder='Enter your email address' name='email' type='email' />
-    <input type="submit" name="Submit" value="Send new password" />
-    </form>
-    </div>
 </section>
-<? require_once("inc/footer.php"); ?>
-<!-- BEGIN PASSSWORD RESET FORM -->
-<script>
-$(document).ready(function(){
-	$(".toggle_container").hide();
-	$("a.trigger").click(function(){
-		$('.toggle_container').slideToggle("slow");
-	});
-});
-</script>
+
 
